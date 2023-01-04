@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szkoła ponadgimnazjalna</title>
+    <link rel="stylesheet" type="text/css" href="styl.css">
+    
+</head>
+<body>
+    <header>
+        <h2>Projekt strony internetowej szkoły ponadgimnazjalnej</h2>
+    </header>
+    <div id="lewy">
+        <h3>Do pobrania</h3>
+        <ul>
+            <li><a href="kwerendy.txt">Zapytania SQL</a></li>
+            <li><a href="szkola_nowa.sql">baza danych</a></li>
+        </ul>
+    </div>
+    <div id="srodek">
+        <table>
+            <tr>
+                <td>Treść zapytania</td>
+                <td width="405px">Zrzut ekranu</td>
+            </tr>
+            <tr>
+                <td>INSERT into uczen values ("27","Jasny","Wiktoria","1");</td>
+                <td><img src="Kwerenda1.png" alt="kwerenda1.png"></td>
+            </tr>
+            <tr>
+                <td>SELECT wychowawca.imie, wychowawca.nazwisko from wychowawca, uczen where wychowawca.id_klasy=uczen.id_klasy and uczen.nazwisko="Markiewicz";</td>
+                <td><img src="Kwerenda2.png" alt="kwerenda2.png"></td>
+            </tr>
+            <tr>
+                <td>CREATE user "Jan_Bogucki"@'localhost' identified by "jb_123";</td>
+                <td><img src="nowy_uzytkownik.png" alt="nowy_uzytkownik.png"></td>
+            </tr>
+            <tr>
+                <td>GRANT SELECT, INSERT, DELETE on uczen to "Jan_Bogucki"@'localhost';</td>
+                <td><img src="uprawnienia.png" alt="uprawnienia.png"></td>
+            </tr>
+        </table>
+    </div>
+    <div id="prawy">
+        <h4>Obliczanie średniej ocen</h4>
+        <ul>
+            <li>Polak<input type="text" id="polak"></li>
+            <li>Nowak<input type="text" id="nowak"></li>
+            <li>Rysik<input type="text" id="rysik"></li>
+        </ul>
+        <button onclick="oblicz()">Oblicz</button>
+        <h4>Średnia ocen:</h4>
+        <p id="wynik"></p>
+    </div>
+    <footer>
+        <h5>Autor strony:Joszczyk Hubert</h5>
+    </footer>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

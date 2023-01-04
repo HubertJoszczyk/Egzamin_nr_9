@@ -1,0 +1,4 @@
+Zapytanie 1: INSERT into uczen values ("27","Jasny","Wiktoria","1");
+Zapytanie 2: SELECT wychowawca.imie, wychowawca.nazwisko from wychowawca, uczen where wychowawca.id_klasy=uczen.id_klasy and uczen.nazwisko="Markiewicz";
+Zapytanie 3: CREATE user "Jan_Bogucki"@'localhost' identified by "jb_123";
+Zapytanie 4: GRANT SELECT, INSERT, DELETE on uczen to "Jan_Bogucki"@'localhost';
